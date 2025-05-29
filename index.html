@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #mainmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color:rgb(233, 156, 61);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    background-image: linear-gradient(to right, lightblue, white);
+    background-size: 200% auto;
+    background-position: left center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-bottom: 2px solid darkblue;
+
+}
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+#logo a {
+    color: black;
+    text-decoration: none;
+    background-color: lightblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid darkblue;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    background-image: linear-gradient(to right, lightblue, white);
+    background-size: 200% auto;
+    background-position: left center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);     
+}
+#logo a:hover {
+    color: darkblue;
+    background-color: lightcoral;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    background-position: right center;
+    background-color: lightblue;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    background-image: linear-gradient(to right, lightblue, white);
+    background-size: 200% auto;
+    background-position: right center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);      
+
+}
+#menu-items {
+    display: flex;
+    gap: 20px;
+}
+#menu-items a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+#ChickenBanana{
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    background-color: beige;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid darkblue;
+    padding: 10px 15px;
+    border-radius: 10px;             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+ 
+}
+#ChickenBanana:hover {
+    background-color: lightblue;
+    color: darkblue;
+}
+#mainmenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+#mainmenu a:hover {
+    color: darkblue;
+}
+#mainmenu a.active {
+    color: darkblue;
+    font-weight: bold;
+}
+#mainmenu a.active:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+#mainmenu a:visited {
+    color: darkblue;
+}
+#mainmenu a:visited:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+#mainmenu a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+#mainmenu a:focus:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+#mainmenu a:active {
+    color: beige;
+    text-decoration: underline;
+}
+#mainmenu a:active:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+#mainmenu a:disabled {
+    color: gray;
+    pointer-events: none;
+}   
+#mainmenu a:disabled:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus {
+    outline: none;
+    box-shadow: none;
+}
+#mainmenu a:disabled:active {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:active:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:visited {
+    color: gray;
+}
+#mainmenu a:disabled:visited:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus {
+    outline: none;
+    box-shadow: none;
+}
+#mainmenu a:disabled:focus:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:active {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:active:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:visited {
+    color: gray;
+}
+#mainmenu a:disabled:focus:visited:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:visited:active {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:visited:active:hover {
+    color: gray;
+    text-decoration: none;
+}
+#mainmenu a:disabled:focus:visited:active:focus {
+    outline: none;
+    box-shadow: none;
+} 
+
+  #ChickenBananaone{
+        color: black;
+        text-decoration: none;
+        font-size: 50px;
+        background-color: beige;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        border: 2px solid darkblue;
+        padding: 10px 15px;
+        border-radius: 10px;             
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: 'Courier New', Courier, monospace;
+    }
+#ChickenBananaone:hover {
+        background-color: lightblue;
+        color: darkblue;
+    }
+#mainmenu a:disabled:focus:visited:active:hover {
+    color: gray;
+    text-decoration: none;
+}                                   
+#mainmenu a:disabled:focus:visited:active:focus {
+    outline: none;
+    box-shadow: none;
+}
+#mainmenu a:disabled:focus:visited:active:focus:hover {
+    color: gray;
+    text-decoration: none;
+}               
+#mainmenu a:disabled:focus:visited:active:focus:visited {
+    color: gray;
+}
+#mainmenu a:disabled:focus:visited:active:focus:visited:hover {
+    color: gray;
+    text-decoration: none;
+}       
+s
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>CodeCrafted</title>
+</head>
+<body style="background-color: rgb(240, 240, 240); background-image: url(&quot;background.jpg&quot;); background-size: cover;">
+    
+     <div class="logo" id="logo">
+        
+            <h1 id="ChickenBanana">Welcome to CodeCrafted!</h1>
+            <p id="ChickenBananaone" style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Teach. Build. Code. Deliver.</p>
+            <a href="file:///Users/zareh/Desktop/Coding/For%20fun/Code/contact.html">Resources we used</a>
+            <a href="file:///Users/zareh/Desktop/Coding/For%20fun/Code/random.html">Tutorials</a>
+            <a href="file:///Users/zareh/Desktop/Coding/For%20fun/Code/Contactus.html">Contact</a>
+            <a href="file:///Users/zareh/Desktop/Coding/For%20fun/Code/aboutus.html">About Us</a>
+            <br>
+            <br>
+            <a href="file:///Users/zareh/Desktop/Coding/For%20fun/Code/you.html">Thank you</a>
+        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">CodeCrafted: Your Coding Hub</h2>
+    <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Welcome to CodeCrafted, your ultimate destination for all things coding!</p>
+    <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Here, you can find a wide range of coding projects, tutorials, and resources to help you enhance your skills.</p>
+    <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Whether you're a beginner or an experienced developer, we have something for everyone.</p>
+    <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Explore our projects to see real-world applications of coding, dive into our tutorials for step-by-step guides, and check out our resources for additional learning materials.</p>
+    <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">Join our community of coding enthusiasts and start your journey today!</p>
+
+    <nav>
+           
+        
+    </nav>
+    <footer>
+        <p style="color: rgb(0, 123, 255); font-size: 1.2em; text-align: center; font-family: Arial, sans-serif;">© 2023 CodeCrafted. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+
+        // JavaScript code to enhance the user experience
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Welcome to CodeCrafted!");
+        });
+    </script>
+
+   
+    <script>
+        // Additional JavaScript functionality can be added here
+        console.log("This is a simple coding website.");
+        // You can add more interactive features or animations as needed
+        function showAlert() {
+            alert("Welcome to CodeCrafted!");
+        }
+        // Call the function to show the alert
+        showAlert();
+    </script>
+    <script>
+        // Example of a simple JavaScript function
+        function greetUser() {
+            const userName = prompt("What's your name?");
+            if (userName) {
+                alert(`Hello, ${userName}! Welcome to CodeCrafted! Enjoy!`);
+            } else {
+                alert("Hello! Welcome to CodeCrafted! Enjoy!");
+            }
+        }
+        // Call the function to greet the user
+        greetUser();
+    </script>
+    <script>
+        // Example of a simple JavaScript function to change the background color
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "#f0f0f0"; // Light gray background
+        }
+        // Call the function to change the background color
+        changeBackgroundColor();
+    </script>
+    <script>
+        // Example of a simple JavaScript function to display the current date
+        function displayCurrentDate() {
+            const currentDate = new Date();
+            document.getElementById("currentDate").innerText = `Today's date is: ${currentDate.toLocaleDateString()}`;
+        }
+        // Call the function to display the current date
+        displayCurrentDate();
+    </script>
+    <div id="currentDate"></div>
+    <script>
+        // Example of a simple JavaScript function to toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+        // Call the function to toggle dark mode on button click
+        document.getElementById("darkModeButton").addEventListener("click", toggleDarkMode);
+    </script>
+    <button id="darkModeButton">Toggle Dark Mode</button>
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        #darkModeButton {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #darkModeButton:hover {
+            background-color: #0056b3;
+        }
+    </style>    
+    <script>
+        // Example of a simple JavaScript function to display a random quote
+        function displayRandomQuote() {
+            const quotes = [
+                "Code is like humor. When you have to explain it, it’s bad.",
+                "Talk is cheap. Show me the code.",
+                "Simplicity is the soul of efficiency.",
+                "First, solve the problem. Then, write the code."
+            ];
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("randomQuote").innerText = quotes[randomIndex];
+        }
+        // Call the function to display a random quote
+        displayRandomQuote();
+    </script>
+    <div id="randomQuote" style="margin-top: 20px; font-style: italic;">Random quote: The best way to predict the future is to invent it.</div>
+    <script>
+        // Example of a simple JavaScript function to change the text color
+        function changeTextColor() {
+            const textElements = document.querySelectorAll("p, h2");
+            textElements.forEach(element => {
+                element.style.color = "#007bff"; // Change text color to blue
+            });
+       
+        }
+        // Call the function to change the text color
+        changeTextColor();
+    </script>
+    <style>
+        p, h2 {
+            transition: color 0.3s ease;
+        }
+        p:hover, h2:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+    <script>
+        // Example of a simple JavaScript function to display a welcome message
+        function displayWelcomeMessage() {
+            const welcomeMessage = "Welcome to CodeCrafted! Enjoy your coding journey!";
+            document.getElementById("welcomeMessage").innerText = welcomeMessage;
+        }
+        // Call the function to display the welcome message
+        displayWelcomeMessage();
+    </script>
+    <div id="welcomeMessage" style="margin-top: 20px; font-weight: bold;"></div>
+    <script>
+        // Example of a simple JavaScript function to change the font size
+        function changeFontSize() {
+            const textElements = document.querySelectorAll("p, h2");
+            textElements.forEach(element => {
+                element.style.fontSize = "1.2em"; // Increase font size
+            });
+        }
+        // Call the function to change the font size
+        changeFontSize();
+    </script>
+    <style>
+        p, h2 {
+            transition: font-size 0.3s ease;
+        }
+        p:hover, h2:hover {
+            font-size: 1.4em; /* Increase font size on hover */
+        }
+    </style>
+    <script>
+        // Example of a simple JavaScript function to display the current time
+        function displayCurrentTime() {
+            const currentTime = new Date().toLocaleTimeString();
+            document.getElementById("currentTime").innerText = `Current time: ${currentTime}`;
+        }
+        // Call the function to display the current time
+        displayCurrentTime();
+    </script>
+    <div id="currentTime" style="margin-top: 20px;"></div>  
+    <script>
+        // Example of a simple JavaScript function to change the background image
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = "url('background.jpg')"; // Change to your image URL
+            document.body.style.backgroundSize = "cover"; // Cover the entire background
+        }
+        // Call the function to change the background image
+        changeBackgroundImage();
+    </script>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Fallback color */
+            background-image: url('background.jpg'); /* Change to your image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+        }
+        #logo {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #logo h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        #logo p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        #logo a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        #logo a:hover {
+            color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #999;
+        }
+        #currentDate, #randomQuote, #welcomeMessage, #currentTime {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        #darkModeButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #darkModeButton:hover {
+            background-color: #0056b3;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark-mode #logo h1,
+        body.dark-mode #logo p,
+        body.dark-mode #currentDate,
+        body.dark-mode #randomQuote,
+        body.dark-mode #welcomeMessage,
+        body.dark-mode #currentTime {
+            color: #fff;
+        }
+        body.dark-mode #darkModeButton {
+            background-color: #0056b3;
+        }
+        body.dark-mode #darkModeButton:hover {
+            background-color: #004494;
+        }
+    </style>    
+  
+    <script>
+        // Example of a simple JavaScript function to display a motivational message
+        function displayMotivationalMessage() {
+            const message = "Keep coding, keep growing!";
+            document.getElementById("motivationalMessage").innerText = message;
+        }
+        // Call the function to display the motivational message
+        displayMotivationalMessage();
+    </script>
+    <div id="motivationalMessage" style="margin-top: 20px; font-style: italic;"></div>
+    <script>
+        // Example of a simple JavaScript function to change the text alignment
+        function changeTextAlignment() {
+            const textElements = document.querySelectorAll("p, h2");
+            textElements.forEach(element => {
+                element.style.textAlign = "center"; // Center align text
+            });
+        }
+        // Call the function to change the text alignment
+        changeTextAlignment();
+    </script>
+    <style>
+        p, h2 {
+            transition: text-align 0.3s ease;
+        }
+        p:hover, h2:hover {
+            text-align: center; /* Center align text on hover */
+        }
+    </style>
+    <script>
+        // Example of a simple JavaScript function to display a random number
+        function displayRandomNumber() {
+            const randomNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
+            document.getElementById("randomNumber").innerText = `Random number: ${randomNumber}`;
+        }
+        // Call the function to display the random number
+        displayRandomNumber();
+    </script>
+    <div id="randomNumber" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to change the font family
+        function changeFontFamily() {
+            const textElements = document.querySelectorAll("p, h2");
+            textElements.forEach(element => {
+                element.style.fontFamily = "Arial, sans-serif"; // Change font family
+            });
+        }
+        // Call the function to change the font family
+        changeFontFamily();
+    </script>   
+    <style>
+        p, h2 {
+            transition: font-family 0.3s ease;
+        }
+        p:hover, h2:hover {
+            font-family: "Arial, sans-serif"; /* Change font family on hover */
+        }
+    </style>
+    <script>
+        // Example of a simple JavaScript function to display a random color
+        function displayRandomColor() {
+            const colors = ["red", "green", "blue", "orange", "purple"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("randomColor").innerText = `Random color: ${randomColor}`;
+            document.body.style.backgroundColor = randomColor; // Change background color
+        }
+        // Call the function to display the random color
+        displayRandomColor();
+    </script>
+    <div id="randomColor" style="margin-top: 20px;"></div>  
+    <script>
+        // Example of a simple JavaScript function to display a random emoji
+        function displayRandomEmoji() {
+            const emojis = ["😀", "🎉", "🚀", "💻", "🌟"];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            document.getElementById("randomEmoji").innerText = `Random emoji: ${randomEmoji}`;
+        }
+        // Call the function to display the random emoji
+        displayRandomEmoji();
+    </script>
+    <div id="randomEmoji" style="margin-top: 20px; font-size: 2em;"></div>              
+    <script>
+        // Example of a simple JavaScript function to display a random fact
+        function displayRandomFact() {
+            const facts = [
+                "Did you know? The first computer programmer was Ada Lovelace.",
+                "The first computer virus was created in 1983.",
+                "Python is named after the British comedy group Monty Python.",
+                "JavaScript was created in just 10 days."
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("randomFact").innerText = `Random fact: ${randomFact}`;
+        }
+        // Call the function to display the random fact
+        displayRandomFact();
+    </script>
+    <div id="randomFact" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random joke
+        function displayRandomJoke() {
+            const jokes = [
+                "Why do programmers prefer dark mode? Because light attracts bugs!",
+                "Why do Java developers wear glasses? Because they don't see sharp.",
+                "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
+                "Why was the JavaScript developer sad? Because he didn't know how to 'null' his feelings."
+            ];
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            document.getElementById("randomJoke").innerText = `Random joke: ${randomJoke}`;
+        }
+        // Call the function to display the random joke
+        displayRandomJoke();
+    </script>
+    <div id="randomJoke" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random quote
+        function displayRandomQuote() {
+            const quotes = [
+                "Code is like poetry.",
+                "The best way to predict the future is to invent it.",
+                "Simplicity is the ultimate sophistication.",
+                "In programming, the hard part isn't solving problems, but deciding what problems to solve."
+            ];
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("randomQuote").innerText = `Random quote: ${randomQuote}`;
+        }
+        // Call the function to display the random quote
+        displayRandomQuote();
+    </script>
+    <div id="randomQuote" style="margin-top: 20px;"></div>      
+    <script>
+        // Example of a simple JavaScript function to display a random image
+        function displayRandomImage() {
+            const images = [
+                "image1.jpg",
+                "image2.jpg",
+                "image3.jpg",
+                "image4.jpg"
+            ];
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById("randomImage").innerHTML = `<img src="${randomImage}" alt="Random Image" style="width: 300px; height: auto;">`;
+        }
+        // Call the function to display the random image
+        displayRandomImage();
+    </script>
+    <div id="randomImage" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random number fact
+        function displayRandomNumberFact() {
+            const facts = [
+                "Zero is the only number that cannot be represented in Roman numerals.",
+                "The number 1 is the only number that is neither prime nor composite.",
+                "The number 2 is the only even prime number.",
+                "The number 3 is the first odd prime number."
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("randomNumberFact").innerText = `Random number fact: ${randomFact}`;
+        }
+        // Call the function to display the random number fact
+        displayRandomNumberFact();
+    </script>
+    <div id="randomNumberFact" style="margin-top: 20px;"></div> 
+    <script>
+        // Example of a simple JavaScript function to display a random programming language
+        function displayRandomLanguage() {
+            const languages = ["JavaScript", "Python", "Java", "C++", "Ruby"];
+            const randomLanguage = languages[Math.floor(Math.random() * languages.length)];
+            document.getElementById("randomLanguage").innerText = `Random programming language: ${randomLanguage}`;
+        }
+        // Call the function to display the random programming language
+        displayRandomLanguage();                    
+    </script>                       
+    <div id="randomLanguage" style="margin-top: 20px;"></div>           
+
+    <script>
+        // Example of a simple JavaScript function to display a random tech company
+        function displayRandomTechCompany() {
+            const companies = ["Google", "Apple", "Microsoft", "Amazon", "Facebook"];
+            const randomCompany = companies[Math.floor(Math.random() * companies.length)];
+            document.getElementById("randomCompany").innerText = `Random tech company: ${randomCompany}`;
+        }
+        // Call the function to display the random tech company
+        displayRandomTechCompany();         
+    </script>   
+    <div id="randomCompany" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech trend
+        function displayRandomTechTrend() {
+            const trends = ["AI and Machine Learning", "Blockchain", "Cloud Computing", "Internet of Things (IoT)", "Cybersecurity"];
+            const randomTrend = trends[Math.floor(Math.random() * trends.length)];
+            document.getElementById("randomTrend").innerText = `Random tech trend: ${randomTrend}`;
+        }
+        // Call the function to display the random tech trend
+        displayRandomTechTrend();
+    </script>
+    <div id="randomTrend" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech innovation
+        function displayRandomTechInnovation() {
+            const innovations = ["Quantum Computing", "5G Technology", "Augmented Reality (AR)", "Virtual Reality (VR)", "Edge Computing"];
+            const randomInnovation = innovations[Math.floor(Math.random() * innovations.length)];
+            document.getElementById("randomInnovation").innerText = `Random tech innovation: ${randomInnovation}`;
+        }
+        // Call the function to display the random tech innovation
+        displayRandomTechInnovation();
+    </script>
+    <div id="randomInnovation" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech gadget
+        function displayRandomTechGadget() {
+            const gadgets = ["Smartphone", "Smartwatch", "Tablet", "Laptop", "Smart Speaker"];
+            const randomGadget = gadgets[Math.floor(Math.random() * gadgets.length)];
+            document.getElementById("randomGadget").innerText = `Random tech gadget: ${randomGadget}`;
+        }
+        // Call the function to display the random tech gadget
+        displayRandomTechGadget();
+    </script>
+    <div id="randomGadget" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech event
+        function displayRandomTechEvent() {
+            const events = ["TechCrunch Disrupt", "CES", "WWDC", "Google I/O", "Microsoft Build"];
+            const randomEvent = events[Math.floor(Math.random() * events.length)];
+            document.getElementById("randomEvent").innerText = `Random tech event: ${randomEvent}`;
+        }
+        // Call the function to display the random tech event
+        displayRandomTechEvent();
+    </script>
+    <div id="randomEvent" style="margin-top: 20px;"></div>  
+    <script>
+        // Example of a simple JavaScript function to display a random tech podcast
+        function displayRandomTechPodcast() {
+            const podcasts = ["The Daily", "Reply All", "StartUp", "TechStuff", "The Vergecast"];
+            const randomPodcast = podcasts[Math.floor(Math.random() * podcasts.length)];
+            document.getElementById("randomPodcast").innerText = `Random tech podcast: ${randomPodcast}`;
+        }
+        // Call the function to display the random tech podcast
+        displayRandomTechPodcast();
+    </script>
+    <div id="randomPodcast" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech book
+        function displayRandomTechBook() {
+            const books = ["Clean Code", "The Pragmatic Programmer", "You Don't Know JS", "Design Patterns", "The Myth
+    <div id="randomBook" style="margin-top: 20px;"></div>
+            ];
+            const randomBook = books[Math.floor(Math.random() * books.length)];
+            document.getElementById("randomBook").innerText = `Random tech book: ${randomBook}`;
+        }
+        // Call the function to display the random tech book
+        displayRandomTechBook();
+    </script>
+    <div id="randomBook" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech blog
+        function displayRandomTechBlog() {
+            const blogs = ["TechCrunch", "Mashable", "The Verge", "Wired", "Ars Technica"];
+            const randomBlog = blogs[Math.floor(Math.random() * blogs.length)];
+            document.getElementById("randomBlog").innerText = `Random tech blog: ${randomBlog}`;
+        }
+        // Call the function to display the random tech blog
+        displayRandomTechBlog();
+    </script>
+    <div id="randomBlog" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech YouTube channel
+        function displayRandomTechYouTubeChannel() {
+            const channels = ["Linus Tech Tips", "Marques Brownlee", "Unbox Therapy", "The Verge", "Tech Insider"];
+            const randomChannel = channels[Math.floor(Math.random() * channels.length)];
+            document.getElementById("randomYouTubeChannel").innerText = `Random tech YouTube channel: ${randomChannel}`;
+        }
+        // Call the function to display the random tech YouTube channel
+        displayRandomTechYouTubeChannel();
+    </script>
+    <div id="randomYouTubeChannel" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech influencer
+        function displayRandomTechInfluencer() {
+            const influencers = ["Elon Musk", "Bill Gates", "Mark Zuckerberg", "Sundar Pichai", "Satya Nadella"];
+            const randomInfluencer = influencers[Math.floor(Math.random() * influencers.length)];
+            document.getElementById("randomTechInfluencer").innerText = `Random tech influencer: ${randomInfluencer}`;
+        }
+        // Call the function to display the random tech influencer
+        displayRandomTechInfluencer();
+    </script>
+    <div id="randomTechInfluencer" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech startup
+        function displayRandomTechStartup() {
+            const startups = ["Airbnb", "Uber", "Slack", "Stripe", "Zoom"];
+            const randomStartup = startups[Math.floor(Math.random() * startups.length)];
+            document.getElementById("randomTechStartup").innerText = `Random tech startup: ${randomStartup}`;
+        }
+        // Call the function to display the random tech startup
+        displayRandomTechStartup();
+    </script>
+    <div id="randomTechStartup" style="margin-top: 20px;"></div>            
+    <script>
+        // Example of a simple JavaScript function to display a random tech innovation
+        function displayRandomTechInnovation() {
+            const innovations = ["Artificial Intelligence", "Blockchain", "Quantum Computing", "Augmented Reality", "5G Technology"];
+            const randomInnovation = innovations[Math.floor(Math.random() * innovations.length)];
+            document.getElementById("randomTechInnovation").innerText = `Random tech innovation: ${randomInnovation}`;
+        }
+        // Call the function to display the random tech innovation
+        displayRandomTechInnovation();
+    </script>
+    <div id="randomTechInnovation" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech challenge
+        function displayRandomTechChallenge() {
+            const challenges = ["Cybersecurity Threats", "Data Privacy", "Scalability Issues", "AI Ethics", "Sustainability"];
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            document.getElementById("randomTechChallenge").innerText = `Random tech challenge: ${randomChallenge}`;
+        }
+        // Call the function to display the random tech challenge
+        displayRandomTechChallenge();
+    </script>
+    <div id="randomTechChallenge" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech solution
+        function displayRandomTechSolution() {
+            const solutions = ["Cloud Computing", "Big Data Analytics", "Machine Learning", "IoT Solutions", "DevOps Practices"];
+            const randomSolution = solutions[Math.floor(Math.random() * solutions.length)];
+            document.getElementById("randomTechSolution").innerText = `Random tech solution: ${randomSolution}`;
+        }
+        // Call the function to display the random tech solution
+        displayRandomTechSolution();
+    </script>
+    <div id="randomTechSolution" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech breakthrough
+        function displayRandomTechBreakthrough() {
+            const breakthroughs = ["CRISPR Technology", "Self-Driving Cars", "Brain-Computer Interfaces", "3D Printing", "Nanotechnology"];
+            const randomBreakthrough = breakthroughs[Math.floor(Math.random() * breakthroughs.length)];
+            document.getElementById("randomTechBreakthrough").innerText = `Random tech breakthrough: ${randomBreakthrough}`;
+        }
+        // Call the function to display the random tech breakthrough
+        displayRandomTechBreakthrough();
+    </script>
+    <div id="randomTechBreakthrough" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech prediction
+        function displayRandomTechPrediction() {
+            const predictions = ["AI will surpass human intelligence by 2030.", "Quantum computing will revolutionize data processing.", "Blockchain will transform supply chain management.", "5G will enable new IoT applications.", "AR will change the way we interact with the digital world."];
+            const randomPrediction = predictions[Math.floor(Math.random() * predictions.length)];
+            document.getElementById("randomTechPrediction").innerText = `Random tech prediction: ${randomPrediction}`;
+        }
+        // Call the function to display the random tech prediction
+        displayRandomTechPrediction();
+        </ScriptProcessorNode>
+    </script>
+    <div id="randomTechPrediction" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech statistic
+        function displayRandomTechStatistic() {
+            const statistics = ["Over 4 billion people use the internet.", "There are more than 1.5 billion websites.", "Mobile devices account for over 50% of web traffic.", "The average person spends over 6 hours online daily.", "There are over 3 million apps available on app stores."];
+            const randomStatistic = statistics[Math.floor(Math.random() * statistics.length)];
+            document.getElementById("randomTechStatistic").innerText = `Random tech statistic: ${randomStatistic}`;
+        }
+        // Call the function to display the random tech statistic
+        displayRandomTechStatistic();
+    </script>
+    <div id="randomTechStatistic" style="margin-top: 20px;"></div>
+    <script>
+        // Example of a simple JavaScript function to display a random tech quote
+        function displayRandomTechQuote() {
+            const quotes = ["Technology is best when it brings people together.", "The future is already here, it's just not evenly distributed.", "Innovation distinguishes between a leader and a follower.", "The only way to do great work is to love what you do."];
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("randomTechQuote").innerText = `Random tech quote: ${randomQuote}`;
+        }
+        // Call the function to display the random tech quote
+        displayRandomTechQuote();
+    </script>
+    <div id="randomTechQuote" style="margin-top: 20px;"></div>  
+    <script>
+        // Example of a simple JavaScript function to display a random tech tip
+        function displayRandomTechTip() {
+            const tips = ["Always comment your code.", "Use version control systems like Git.", "Keep your code DRY (Don't Repeat Yourself).", "Test your code thoroughly before deployment.", "Stay updated with the latest tech trends."];
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById("randomTechTip").innerText = `Random tech tip: ${randomTip}`;
+        }
+        // Call the function to display the random tech tip
+        displayRandomTechTip();
+    </script>
+    <div id="randomTechTip" style="margin-top: 20px;"></div>    
+    <script>
+        // Example of a simple JavaScript function to display a random tech challenge
+        function displayRandomTechChallenge() {
+            const challenges = ["Cybersecurity Threats", "Data Privacy", "Scalability Issues", "AI Ethics", "Sustainability"];
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            document.getElementById("randomTechChallenge").innerText = `Random tech challenge: ${randomChallenge}`;
+           
+    </body>
+    </html>
+    
